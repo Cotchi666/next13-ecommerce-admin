@@ -25,12 +25,12 @@ const ProductsPage = async ({
     }
   });
 
-  const formattedProducts: ProductColumn[] = products.map((item: { id: any; name: any; isFeatured: any; isArchived: any; price: { toNumber: () => number | bigint; }; category: { name: any; }; size: { name: any; }; color: { value: any; }; createdAt: number | Date; }) => ({
+  const formattedProducts: ProductColumn[] = products.map((item) => ({
     id: item.id,
     name: item.name,
     isFeatured: item.isFeatured,
     isArchived: item.isArchived,
-    price: formatter.format(item.price.toNumber()),
+    price: 100,
     category: item.category.name,
     size: item.size.name,
     color: item.color.value,
