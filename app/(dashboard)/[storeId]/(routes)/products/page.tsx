@@ -25,22 +25,22 @@ const ProductsPage = async ({
     }
   });
 
-  const formattedProducts: ProductColumn[] = products.map((item: { id: any; name: any; isFeatured: any; isArchived: any; category: { name: any; }; size: { name: any; }; color: { value: any; }; createdAt: number | Date; }) => ({
-    id: item.id,
-    name: item.name,
-    isFeatured: item.isFeatured,
-    isArchived: item.isArchived,
-    price: 100,
-    category: item.category.name,
-    size: item.size.name,
-    color: item.color.value,
-    createdAt: format(item.createdAt, 'MMMM do, yyyy'),
-  }));
+  // const formattedProducts: ProductColumn[] = products.map((item: { id: any; name: any; isFeatured: any; isArchived: any; category: { name: any; }; size: { name: any; }; color: { value: any; }; createdAt: number | Date; }) => ({
+  //   id: item.id,
+  //   name: item.name,
+  //   isFeatured: item.isFeatured,
+  //   isArchived: item.isArchived,
+  //   price: 100,
+  //   category: item.category.name,
+  //   size: item.size.name,
+  //   color: item.color.value,
+  //   createdAt: format(item.createdAt, 'MMMM do, yyyy'),
+  // }));
 
   return (
     <div className="flex-col">
       <div className="flex-1 space-y-4 p-8 pt-6">
-        <ProductsClient data={formattedProducts} />
+        {/* <ProductsClient data={formattedProducts} /> */}
       </div>
     </div>
   );
