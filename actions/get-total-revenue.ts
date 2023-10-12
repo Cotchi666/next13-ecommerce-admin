@@ -15,7 +15,7 @@ export const getTotalRevenue = async (storeId: string) => {
     }
   });
 
-  const totalRevenue = paidOrders.reduce((total, order) => {
+  const totalRevenue = paidOrders.reduce((total: any, order: { orderItems: any[]; }) => {
     const orderTotal = order.orderItems.reduce((orderSum, item) => {
       return orderSum + item.product.price.toNumber();
     }, 0);
